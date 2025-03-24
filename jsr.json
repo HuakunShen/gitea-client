@@ -5,5 +5,8 @@
   "exports": {
     ".": "./src/hey-api-client/index.ts",
     "./client": "./src/hey-api-client/client.gen.ts"
+  },
+  "publishConfig": {
+    "include": ["src/**/*"]
   }
 }

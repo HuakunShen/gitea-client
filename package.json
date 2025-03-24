@@ -3,6 +3,10 @@
   "module": "index.ts",
   "version": "0.0.1",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HuakunShen/gitea-client"
+  },
   "exports": {
     ".": "./src/hey-api-client/index.ts",
     "./client": "./src/hey-api-client/client.gen.ts"
