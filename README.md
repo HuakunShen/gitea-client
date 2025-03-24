@@ -1,5 +1,8 @@
 # gitea-client
 
+![JSR](https://jsr.io/badges/@hk/gitea-client)
+![NPM Version](https://img.shields.io/npm/v/gitea-client)
+
 ```bash
 bun install gitea-client
 ```
