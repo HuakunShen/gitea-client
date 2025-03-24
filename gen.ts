@@ -1,4 +1,5 @@
 import { createClient } from "@hey-api/openapi-ts";
+import { $ } from "bun";
 
 const res = await fetch("https://gitea.com/swagger.v1.json");
 const json = await res.json();
@@ -9,3 +10,5 @@ await createClient({
   output: "./src/hey-api-client",
   plugins: ["@hey-api/client-fetch"],
 });
+
+await $`bunx tsup`;

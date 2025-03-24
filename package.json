@@ -1,6 +1,5 @@
 {
   "name": "gitea-client",
-  "module": "index.ts",
   "version": "0.0.1",
   "type": "module",
   "repository": {
@@ -8,15 +7,26 @@
     "url": "https://github.com/HuakunShen/gitea-client"
   },
   "exports": {
-    ".": "./src/hey-api-client/index.ts",
-    "./client": "./src/hey-api-client/client.gen.ts"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./client": {
+      "import": "./dist/client.gen.js",
+      "require": "./dist/client.gen.cjs",
+      "types": "./dist/client.gen.d.ts"
+    }
   },
   "scripts": {
-    "build": "bun gen.ts"
+    "build": "bun gen.ts",
+    "postbuild": "verify-package-export verify"
   },
   "devDependencies": {
     "@hey-api/openapi-ts": "^0.64.13",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "tsup": "^8.4.0",
+    "verify-package-export": "^0.0.3"
   },
   "peerDependencies": {
     "typescript": "^5"
