@@ -1,12 +1,23 @@
 {
   "name": "gitea-client",
   "module": "index.ts",
+  "version": "0.0.1",
   "type": "module",
-  "private": true,
+  "exports": {
+    ".": "./src/hey-api-client/index.ts",
+    "./client": "./src/hey-api-client/client.gen.ts"
+  },
+  "scripts": {
+    "build": "bun gen.ts"
+  },
   "devDependencies": {
+    "@hey-api/openapi-ts": "^0.64.13",
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "dependencies": {
+    "@hey-api/client-fetch": "^0.8.3"
   }
 }

@@ -1,0 +1,9 @@
+{
+  "name": "@hk/gitea-client",
+  "version": "0.0.1",
+  "license": "MIT",
+  "exports": {
+    ".": "./src/hey-api-client/index.ts",
+    "./client": "./src/hey-api-client/client.gen.ts"
+  }
+}
